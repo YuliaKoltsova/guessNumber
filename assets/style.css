@@ -1,0 +1,133 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/ptsans.woff2") format("woff2"), url("../assets/fonts/ptsans.woff") format("woff");
+  font-display: swap;
+}
+
+/* Основные стили страницы */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #303030;
+  color: #ffffff;
+  width: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.main {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 5px inset #FFFFFF;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.main-title {
+  margin: 0;
+}
+
+.upload-number__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.upload-number__input {
+  height: 40px;
+  border-radius: 30px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #1A923C;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.upload-number {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.help {
+  text-align: center;
+}
+
+.userNumber-number {
+  font-weight: 700;
+}
+
+.help__text {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.help__text-more {
+  font-weight: 700;
+  color: #FB5A5A;
+}
+
+.count-attempt__count {
+  font-weight: 700;
+}
+
+.range {
+  align-items: baseline;
+  display: flex;
+  column-gap: 10px;
+  background-color: #4D4D4D;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.range__input {
+  height: 36px;
+  border-radius: 15px;
+  padding: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.range__form {
+  display: flex;
+  column-gap: 15px;
+}
+
+.range__input {
+  border: none;
+}

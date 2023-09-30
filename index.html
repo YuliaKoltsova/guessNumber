@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body class="body">
+    <main class="main">
+      <h1 class="main-title">Угадай число</h1>
+      <div class="range">
+        <span class="range__text">Выберите диапазон</span>
+          <label class="range__label"> от
+            <input class="range__input range__input-min" type="number" value="1" min="1" max="999">
+          </label>
+          <label class="range__label"> до
+            <input class="range__input range__input-max" type="number" value="100" min="2" max="1000">
+          </label>
+          <button class="range__button button">Установить диапазон</button>
+          <button class="new-game-button button">Новая игра</button>
+      </div>
+        <label class="upload-number__label"> Введите число:
+          <input class="upload-number__input" type="number">
+        </label>
+        <button class="upload-number__button button">Проверить</button>
+      <div class="count-attempt">
+        <span class="count-attempt__text">Количество попыток:</span>
+        <span class="count-attempt__count"></span>
+      </div>
+      <div class="help">
+        <div class="help__user-number">
+          <span class="user-number__text">Ваше число:</span>
+          <span class="user-number__number"></span>
+        </div>
+        <span class="help__text"></span>
+        <span class="help__text-more"></span>
+      </div>
+    </main>
+
+    <script src="js/main.js" type="module"></script>
+
+  </body>
+</html>
