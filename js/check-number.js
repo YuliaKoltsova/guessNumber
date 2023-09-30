@@ -31,15 +31,6 @@ const setRange = () => {
 
   if (isNaN(minRange) || isNaN(maxRange) || minRange >= maxRange) {
     helpText.textContent = 'Пожалуйста, введите корректный диапазон чисел.';
-    // if (minRange < 1 || minRange >= 999) {
-    //   helpText.textContent = "Максимальный диапазон значений от 1 до 1000";
-    //   document.querySelector('.range__input-min').value = "";
-    // }
-    if (maxRange < 2 || maxRange > 1000) {
-      console.log(1)
-      // helpText.textContent = "Максимальный диапазон значений от 1 до 1000";
-      // document.querySelector('.range__input-max').value = "";
-    }
   }
 }
 
@@ -47,7 +38,6 @@ const setRange = () => {
 const startNewGame = () => {
   setRange(); //устанавливаем диапазон
   secretNumber = generateRandomNumber(minRange, maxRange); // получаем случаное число от компьютера в заданном диапазоне
-  console.log(secretNumber)
   attempts = 0; // изначальное количество попыток = 0
   userNumber.textContent = ''; // очищаем поле с числом пользователя
   countAttempt.textContent = ''; // очищаем поле с количеством попыток
@@ -58,10 +48,9 @@ const startNewGame = () => {
 const checkGuess = () => { // проверить число
   const userNumber = userNumberInput.value; // получаем число от пользователя
   userNumberInput.value = ""; // очищаем инпут для ввода
-  showHelp(secretNumber, userNumber, maxRange); // показываем подсказки
+  showHelp(secretNumber, userNumber, minRange, maxRange); // показываем подсказки
   getCountAttempts(); // прибавляем количество попыток
   countAttempt.textContent = attempts; // отображаем количество попыток на странице
-  console.log(secretNumber, Number(userNumber))
   if (attempts > 2) {
     isEvenNumber(secretNumber);
     if (secretNumber == Number(userNumber)) {
